@@ -1,0 +1,20 @@
+
+#!/bin/bash
+
+# Menu or list of devices
+echo "Which device would you like to connect with?"
+echo ""
+echo "1 - Router-01"
+echo "2 - Switch-01"
+echo "3 - Linux-server"
+
+# username to log in to network devices
+uname=username
+
+read device;
+case $device in
+	1) ssh $uname@ip-address;;
+	2) ssh $uname@ip-address;;
+	3) ssh $uname@ip-address;;
+	*) echo -e "Please try again.\nYou didn't choose the network device.";;
+esac
